@@ -1,14 +1,13 @@
 import React from 'react';
 import {useLayoutEffect} from 'react';
 
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {TouchableOpacity, View, Image} from 'react-native';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import RequestsScreen from './Requests';
 import FriendsScreen from './Friends';
 import ProfileScreen from './Profile';
-import {TouchableOpacity} from 'react-native';
-import {icon} from '@fortawesome/fontawesome-svg-core';
 
 const Tab = createBottomTabNavigator();
 
@@ -22,6 +21,14 @@ export default function HomeScreen({navigation}) {
   return (
     <Tab.Navigator
       screenOptions={({route, navigation}) => ({
+        headerLeft: () => (
+          <View style={{marginLeft: 16}}>
+            <Image
+              source={require('../assets/Profile.png')}
+              style={{width: 28, height: 28}}
+            />
+          </View>
+        ),
         headerRight: () => (
           <TouchableOpacity>
             <FontAwesomeIcon

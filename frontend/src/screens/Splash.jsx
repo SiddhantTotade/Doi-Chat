@@ -31,7 +31,7 @@ export default function SplashScreen({navigation}) {
       }}>
       <StatusBar barStyle="light-content" />
       <Animated.View style={[{transform: [{translateY}]}]}>
-        <Title text="Doi" color="#fff" fontFamily="LeckerliOne-Regular" />
+        <Title text="Doi" color="#fff" />
       </Animated.View>
     </SafeAreaView>
   );

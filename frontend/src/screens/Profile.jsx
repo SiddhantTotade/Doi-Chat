@@ -13,6 +13,8 @@ function ProfileImage() {
       onPress={() =>
         launchImageLibrary({includeBase64: true}, response => {
           utils.log('LaunchImage', response);
+          if(response.didCancel) return
+          const file = response.assets(0)
         })
       }>
       <Image

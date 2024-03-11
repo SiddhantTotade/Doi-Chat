@@ -1,3 +1,5 @@
+import ProfileImage from '../assets/Profile.png';
+
 function log() {
   for (let i = 0; i < arguments.length; i++) {
     let arg = arguments[i];
@@ -10,4 +12,14 @@ function log() {
   }
 }
 
-export default {log};
+function thumbnail(url) {
+  if (!url) {
+    return ProfileImage;
+  }
+
+  return {
+    uri: 'http://192.168.43.248:8000' + url,
+  };
+}
+
+export default {log, thumbnail};

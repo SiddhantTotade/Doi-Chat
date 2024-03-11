@@ -6,27 +6,23 @@ import {launchImageLibrary} from 'react-native-image-picker';
 
 import useGlobal from '../core/global';
 import utils from '../core/utils';
+import Thumbnail from '../common/Thumbnail';
 
 function ProfileImage() {
+  const uploadThumbnail = useGlobal(state => state.uploadThumbnail);
+  const user = useGlobal(state => state.user);
+
   return (
     <TouchableOpacity
       onPress={() =>
         launchImageLibrary({includeBase64: true}, response => {
-          utils.log('LaunchImage', response);
-          if(response.didCancel) return
-          const file = response.assets(0)
+          // utils.log('LaunchImage', response);
+          if (response.didCancel) return;
+          const file = response.assets[0];
+          uploadThumbnail(file);
         })
       }>
-      <Image
-        source={require('../assets/Profile.png')}
-        style={{
-          width: 200,
-          height: 200,
-          borderRadius: 100,
-          backgroundColor: '#e0e0e0',
-          marginBottom: 20,
-        }}
-      />
+      <Thumbnail url={user.thumbnail} size={200} />
       <View
         style={{
           position: 'absolute',

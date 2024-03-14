@@ -50,7 +50,7 @@ export default function SignInScreen({navigation}) {
     })
       .then(res => {
         const credentials = {username: username, password: password};
-        utils.log(res.data), login(credentials, res.data.user);
+        utils.log(res.data), login(credentials, res.data.user, res.data.tokens);
       })
       .catch(error => {
         if (error.response) {

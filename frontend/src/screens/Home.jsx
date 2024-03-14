@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useLayoutEffect} from 'react';
 
-import {TouchableOpacity, View, Image} from 'react-native';
+import {TouchableOpacity, View} from 'react-native';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
@@ -32,6 +32,10 @@ export default function HomeScreen({navigation}) {
     };
   }, []);
 
+  function onSearch() {
+    navigation.navigate('Search');
+  }
+
   return (
     <Tab.Navigator
       screenOptions={({route, navigation}) => ({
@@ -41,7 +45,7 @@ export default function HomeScreen({navigation}) {
           </View>
         ),
         headerRight: () => (
-          <TouchableOpacity>
+          <TouchableOpacity onPress={onSearch}>
             <FontAwesomeIcon
               style={{marginRight: 16}}
               icon="magnifying-glass"

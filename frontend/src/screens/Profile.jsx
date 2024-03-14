@@ -26,8 +26,7 @@ function ProfileImage() {
       <View
         style={{
           position: 'absolute',
-          bottom: 30,
-          right: 10,
+          bottom: 10,
           backgroundColor: '#202020',
           width: 40,
           height: 40,

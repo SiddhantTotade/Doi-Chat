@@ -96,9 +96,10 @@ class FriendSerializer(serializers.ModelSerializer):
         return date.isoformat()
 
     def get_preview(self, obj):
+        default= "New connection. Say hii.."
         if not hasattr(obj, "latest_text"):
-            return "New connection. Say hii.."
-        return obj.latest_text
+            return default
+        return obj.latest_text or default
 
 
 class MessageSerializer(serializers.ModelSerializer):

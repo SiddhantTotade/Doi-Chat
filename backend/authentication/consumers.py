@@ -92,7 +92,7 @@ class ChatConsumer(WebsocketConsumer):
         user = self.scope['user']
         connectionId = data.get("connectionId")
         page = data.get("page")
-        page_size = 5
+        page_size = 25
 
         try:
             connection = Connection.objects.get(id=connectionId)

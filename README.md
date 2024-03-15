@@ -1,5 +1,5 @@
 <div align="center" >
-  <img src="https://github.com/SiddhantTotade/Doi---A-Django-Chat-Application/blob/main/App%20Images/Doi%20Chat.png" width="700px" height="200px" />
+  <img src="https://github.com/SiddhantTotade/Doi---A-Django-Chat-Application/blob/main/App%20Images/Doi%20Chat.png" width="500px" height="200px" />
 </div>
 
 # About the project

@@ -19,24 +19,30 @@ Doi is a android chat application. This application uses Django in the backend a
 # Getting Started
 + Clone the repo in your PC or Laptop.
 ```shell
-git clone git@github.com:SiddhantTotade/listen.git.
+git@github.com:SiddhantTotade/Doi-Chat.git
 ```
-+ Change directory to spotify.
-```shell
-cd listen_app
-```
-+ Open a terminal in the `listen_app` and type command.
-```shell
-npm install
-```
-+ After installation, type command.
-```shell
-npm run dev
-```
-+ Open application
-```shell
-http://localhost:3000/
-```
++ Inside the directory `Doi-Chat`, type the following commands
+  - Install backend dependencies
+    ```shell
+      make install-backend
+    ```
+  - Install frontend dependencies
+    ```shell
+      make install-frontend
+    ```
+  - Run frontend server
+    ```shell
+      make run-frontend
+    ```
+  - Run backend server
+    ```shell
+      make run-backend
+    ```
+  - Run redis server
+    ```shell
+      make run-redis
+    ```
++ When the frontend starts, It automatically install the application in the connected android device. Make sure that the android is connected with USB and USB Debugging is turned on.
 
 ## Configure the application
 + Visit the link `https://rapidapi.com/tipsters/api/shazam-core`

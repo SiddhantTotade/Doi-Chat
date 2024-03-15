@@ -17,6 +17,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 
 import useGlobal from '../core/global';
 import Thumbnail from '../common/Thumbnail';
+import utils from '../core/utils';
 
 function MessageHeader({friend}) {
   return (
@@ -35,7 +36,7 @@ function MessageHeader({friend}) {
   );
 }
 
-function MessageBubbleMe({text}) {
+function MessageBubbleMe({text, created}) {
   return (
     <View style={{flexDirection: 'row', padding: 4, paddingRight: 12}}>
       <View style={{flex: 1}} />
@@ -44,13 +45,25 @@ function MessageBubbleMe({text}) {
           backgroundColor: '#303040',
           borderRadius: 21,
           maxWidth: '75%',
-          paddingHorizontal: 16,
-          paddingVertical: 12,
+          paddingHorizontal: 8,
+          paddingVertical: 8,
           justifyContent: 'center',
           marginRight: 8,
           minHeight: 42,
         }}>
-        <Text style={{color: '#fff', fontSize: 16, lineHeight: 18}}>
+        <Text style={{color: '#fff', fontSize: 10, lineHeight: 18}}>
+          {utils.convertTime(created)}
+        </Text>
+        <Text
+          style={{
+            color: '#fff',
+            fontSize: 16,
+            lineHeight: 18,
+            borderColor: 'red',
+            padding: 10,
+            borderRadius: 10,
+            backgroundColor: '#4d4d4d',
+          }}>
           {text}
         </Text>
       </View>
@@ -167,7 +180,7 @@ function MessageBubble({index, message, friend}) {
   }
 
   return message.is_me ? (
-    <MessageBubbleMe text={message.text} />
+    <MessageBubbleMe text={message.text} created={message.created} />
   ) : (
     <MessageBubbleFriend text={message.text} friend={friend} />
   );

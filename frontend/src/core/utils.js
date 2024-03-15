@@ -26,7 +26,7 @@ function formatTime(date) {
   if (date === null) {
     return '-';
   }
-  
+
   const now = new Date();
   const s = Math.abs(now - new Date(date)) / 1000;
 
@@ -59,4 +59,15 @@ function formatTime(date) {
   return `${y}y ago`;
 }
 
-export default {log, thumbnail, formatTime};
+function convertTime(time) {
+  const date = new Date(time);
+  const hours = date.getUTCHours();
+  const minutes = date.getUTCMinutes();
+  const period = hours >= 12 ? 'p.m.' : 'a.m.';
+  const formattedHours = hours % 12 === 0 ? 12 : hours % 12;
+  const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+
+  return formattedHours + ':' + formattedMinutes + ' ' + period;
+}
+
+export default {log, thumbnail, formatTime, convertTime};

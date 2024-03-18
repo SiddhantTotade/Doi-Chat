@@ -7,13 +7,9 @@ import {
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
-import Input from '../common/Input';
-import Button from '../common/Button';
-import Title from '../common/Title';
 
-import api from '../core/api';
-import utils from '../core/utils';
-import useGlobal from '../core/global';
+import {Input, Title, Button} from 'common/index';
+import {useGlobal, api, utils} from 'core/_index';
 
 export default function SignUpScreen({navigation}) {
   const [username, setUsername] = useState('');

@@ -1,0 +1,9 @@
+export {default as HomeScreen} from './Home';
+export {default as SearchScreen} from './Search';
+export {default as SignInScreen} from './SignIn';
+export {default as SignUpScreen} from './SignUp';
+export {default as SplashScreen} from './Splash';
+export {default as ProfileScreen} from './Profile';
+export {default as FriendsScreen} from './Friends';
+export {default as RequestsScreen} from './Requests';
+export {default as MessagesScreen} from './Messages';

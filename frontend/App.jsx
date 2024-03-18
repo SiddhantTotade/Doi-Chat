@@ -7,12 +7,14 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import './src/core/fontawesome';
 import useGlobal from './src/core/global';
 
-import SplashScreen from './src/screens/Splash';
-import HomeScreen from './src/screens/Home';
-import SignInScreen from './src/screens/SignIn';
-import SignUpScreen from './src/screens/SignUp';
-import SearchScreen from './src/screens/Search';
-import MessagesScreen from './src/screens/Messages';
+import {
+  SignInScreen,
+  SignUpScreen,
+  SplashScreen,
+  HomeScreen,
+  SearchScreen,
+  MessagesScreen,
+} from './src/screens/_index';
 
 const lightTheme = {
   ...DefaultTheme,

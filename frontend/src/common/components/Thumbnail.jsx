@@ -1,6 +1,6 @@
 import React from 'react';
 
-import utils from '../core/utils';
+import utils from '../../core/utils';
 import {Image} from 'react-native';
 
 export default function Thumbnail({url, size}) {

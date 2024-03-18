@@ -1,0 +1,12 @@
+{
+  "extends": "@react-native/typescript-config/jsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "assets/*": ["./src/assets/*"],
+      "common/*": ["./src/common/*"],
+      "core/*": ["./src/core/*"],
+      "screens/*": ["./src/screens/*"]
+    }
+  }
+}

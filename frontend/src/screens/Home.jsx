@@ -1,16 +1,11 @@
-import React, {useEffect} from 'react';
-import {useLayoutEffect} from 'react';
-
 import {TouchableOpacity, View} from 'react-native';
+import React, {useEffect, useLayoutEffect} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import RequestsScreen from './Requests';
-import FriendsScreen from './Friends';
-import ProfileScreen from './Profile';
-import useGlobal from '../core/global';
-
-import Thumbnail from '../common/Thumbnail';
+import {useGlobal} from 'core/_index';
+import {Thumbnail} from 'common/index';
+import {FriendsScreen, ProfileScreen, RequestsScreen} from './_index';
 
 const Tab = createBottomTabNavigator();
 

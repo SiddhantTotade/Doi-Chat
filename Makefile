@@ -7,7 +7,7 @@ run-django:
 	cd venv/Scripts && activate && cd ../../backend && python manage.py runserver <IP:PORT>
 
 install-frontend:
-	cd frontend && npm install
+	cd frontend && yarn install
 
 install-backend:
-	cd venv\Scripts
+	cd venv/Scripts && activate && cd ../../ && pip install -r requirements.txt

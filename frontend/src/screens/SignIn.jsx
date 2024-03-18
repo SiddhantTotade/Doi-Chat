@@ -8,13 +8,8 @@ import {
   KeyboardAvoidingView,
 } from 'react-native';
 
-import Input from '../common/Input';
-import Title from '../common/Title';
-import Button from '../common/Button';
-
-import api from '../core/api';
-import utils from '../core/utils';
-import useGlobal from '../core/global';
+import {Input, Title, Button} from 'common/index';
+import {useGlobal, utils, api} from 'core/_index';
 
 export default function SignInScreen({navigation}) {
   const [username, setUsername] = useState('');

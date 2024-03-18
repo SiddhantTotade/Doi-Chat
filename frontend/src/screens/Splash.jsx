@@ -1,7 +1,7 @@
 import React, {useEffect, useLayoutEffect} from 'react';
 import {Animated, SafeAreaView, StatusBar} from 'react-native';
 
-import Title from '../common/Title';
+import {Title} from 'common/index';
 
 export default function SplashScreen({navigation}) {
   useLayoutEffect(() => {

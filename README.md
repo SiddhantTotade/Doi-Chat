@@ -22,7 +22,7 @@ Doi is a android chat application. This application uses Django in the backend a
 git@github.com:SiddhantTotade/Doi-Chat.git
 ```
 + Inside the directory `Doi-Chat`, type the following commands
-  - Setup Backend
+  - Setup backend
     ```shell
       make setup-backend
     ```
@@ -30,7 +30,7 @@ git@github.com:SiddhantTotade/Doi-Chat.git
     ```shell
       make install-backend
     ```
-  - Setup Frontend
+  - Setup frontend
     ```shell
       make setup-frontend
     ```

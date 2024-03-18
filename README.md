@@ -45,6 +45,7 @@ git@github.com:SiddhantTotade/Doi-Chat.git
 + When the frontend starts, It automatically install the application in the connected android device. Make sure that the android is connected with USB and USB Debugging is turned on.
 
 ## Configure the application
+#### Configure Django
 + Create a `venv` in the cloned directory. `python -m venv venv`
 + Run `make install-backend` from the root folder.
 + Create a new directory `mkdir backend`.
@@ -52,9 +53,14 @@ git@github.com:SiddhantTotade/Doi-Chat.git
 + Create a new Django project. `djago-admin startproject core .`
 + Create an Django app. `python manage.py startapp <name_of_the_application>`.
 + Add the adroid device Ipv4 address in allowed hosts.
-+ Come to root directory and Run the backend. `make run-backend`
++ Make sure to change the `<IPv4 PORT>` in `Makefile`
 
-## Project Images
+#### Configure React Native
+  + Create a new project. `npx react-native@latest init frontend`
+  + Run command `make install-frontend`
+  + Run frontend `make run-android`
+
+### Project Images
 <div align="center" gap="10px" display="flex">
   <img src="https://github.com/SiddhantTotade/Doi-Chat/blob/main/App%20Images/Screenshot_2024-03-18-12-18-19-257_com.frontend.jpg" width="100px" />
   <img src="https://github.com/SiddhantTotade/Doi-Chat/blob/main/App%20Images/Screenshot_2024-03-18-12-18-24-679_com.frontend.jpg" width="100px" />

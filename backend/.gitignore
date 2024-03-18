@@ -3,3 +3,4 @@ core/__pycache__
 authentication/__pycache__
 authentication/migrations
 media
+.env

@@ -22,9 +22,17 @@ Doi is a android chat application. This application uses Django in the backend a
 git@github.com:SiddhantTotade/Doi-Chat.git
 ```
 + Inside the directory `Doi-Chat`, type the following commands
+  - Setup Backend
+    ```shell
+      make setup-backend
+    ```
   - Install backend dependencies
     ```shell
       make install-backend
+    ```
+  - Setup Frontend
+    ```shell
+      make setup-frontend
     ```
   - Install frontend dependencies
     ```shell
@@ -32,11 +40,11 @@ git@github.com:SiddhantTotade/Doi-Chat.git
     ```
   - Run frontend server
     ```shell
-      make run-frontend
+      make run-android
     ```
   - Run backend server
     ```shell
-      make run-backend
+      make run-django
     ```
   - Run redis server
     ```shell
@@ -44,21 +52,10 @@ git@github.com:SiddhantTotade/Doi-Chat.git
     ```
 + When the frontend starts, It automatically install the application in the connected android device. Make sure that the android is connected with USB and USB Debugging is turned on.
 
-## Configure the application
+## Configure the application (Remember before start)
 #### Configure Django
-+ Create a `venv` in the cloned directory. `python -m venv venv`
-+ Run `make install-backend` from the root folder.
-+ Create a new directory `mkdir backend`.
-+ Change the directory to backend. `cd backend`
-+ Create a new Django project. `djago-admin startproject core .`
-+ Create an Django app. `python manage.py startapp <name_of_the_application>`.
-+ Add the adroid device Ipv4 address in allowed hosts.
-+ Make sure to change the `<IPv4 PORT>` in `Makefile`
-
-#### Configure React Native
-  + Create a new project. `npx react-native@latest init frontend`
-  + Run command `make install-frontend`
-  + Run frontend `make run-android`
++ Add the adroid device Ipv4 address in `Allowed_Hosts` in `settings.py`.
++ Make sure to change the `<IPv4 PORT>` in `Makefile` for running the server. If you are using Android Studio then use the default one `localhost:8000`.
 
 ### Project Images
 <div align="center" gap="10px" display="flex">

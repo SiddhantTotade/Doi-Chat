@@ -45,13 +45,21 @@ git@github.com:SiddhantTotade/Doi-Chat.git
 + When the frontend starts, It automatically install the application in the connected android device. Make sure that the android is connected with USB and USB Debugging is turned on.
 
 ## Configure the application
-+ Visit the link `https://rapidapi.com/tipsters/api/shazam-core`
-+ Create an account
-+ After creating, copy the `X-RapidAPI-Key`
-+ Create a `.env` file in `src` directory and paste the following code in `.env` file.
-`VITE_SHAZAM_CORE_RAPID_API_KEY=API_KEY`
++ Create a `venv` in the cloned directory. `python -m venv venv`
++ Run `make install-backend` from the root folder.
++ Create a new directory `mkdir backend`.
++ Change the directory to backend. `cd backend`
++ Create a new Django project. `djago-admin startproject core .`
++ Create an Django app. `python manage.py startapp <name_of_the_application>`.
++ Add the adroid device Ipv4 address in allowed hosts.
++ Come to root directory and Run the backend. `make run-backend`
 
 ## Project Images
 <div align="center" gap="10px" display="flex">
-<img src="https://github.com/SiddhantTotade/listen/blob/main/app_images/listen_1.png" width="400px" />
+  <img src="https://github.com/SiddhantTotade/Doi-Chat/blob/main/App%20Images/Screenshot_2024-03-18-12-18-19-257_com.frontend.jpg" width="100px" />
+  <img src="https://github.com/SiddhantTotade/Doi-Chat/blob/main/App%20Images/Screenshot_2024-03-18-12-18-24-679_com.frontend.jpg" width="100px" />
+  <img src="https://github.com/SiddhantTotade/Doi-Chat/blob/main/App%20Images/Screenshot_2024-03-18-12-20-55-315_com.frontend.jpg" width="100px" />
+  <img src="https://github.com/SiddhantTotade/Doi-Chat/blob/main/App%20Images/Screenshot_2024-03-18-14-13-09-764_com.frontend.jpg" width="100px" />
+  <img src="https://github.com/SiddhantTotade/Doi-Chat/blob/main/App%20Images/Screenshot_2024-03-18-15-56-11-095_com.frontend.jpg" width="100px" />
+  <img src="https://github.com/SiddhantTotade/Doi-Chat/blob/main/App%20Images/Screenshot_2024-03-18-15-57-08-126_com.frontend.jpg" width="100px" />
 <div/>
